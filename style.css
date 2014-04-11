@@ -1,0 +1,161 @@
+#slides {
+      display:none;
+    }
+
+* {
+	font-family:calibri;
+}
+	
+html {
+	background-color:#0d112e;
+}
+
+.nav li a {
+	text-decoration:none;
+	color:white;
+	padding:30px;
+}
+
+.nav li a:hover {
+	color:black;
+}
+
+.nav li {
+	display:inline;
+}
+
+.nav {
+	margin-top:-200px;
+	background-color:darkslategrey;
+	width:930px;
+	height:50px;
+	margin:0 auto 0 auto;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	box-shadow:0px 0px 7px #000;
+}
+
+input[type="text"]{
+	margin-top:-50px;
+	border-color:black;
+	height:25px;
+	width:120px;
+	border:2px solid #fff;
+	padding-left:2px;
+	color:black;
+	padding-top:-20px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #00;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+}
+
+.logo {
+	margin-left: 180px;
+	padding-bottom:10px;
+}
+
+.image {
+	height:376px;
+	margin-top:20px;
+	border:1px solid #000;
+	width:854px;
+	margin:10 auto 0 auto;
+	box-shadow:0 0 3px #000;
+}
+
+.opacity {
+	position:absolute;
+	opacity: .8;
+	height:376px;
+	width:200px;
+	float:left;
+	background-color:black;
+}
+
+.opacity p {
+	color:white;
+}
+
+p, a{
+}
+
+p {
+	color:white;
+}
+
+.news a:hover {
+	text-decoration:underline;
+}
+
+content-news {
+	width:1000px;
+	height:180px;
+}
+
+.news {
+	margin-top:20px;
+	width:500px;
+	height:270px;
+	padding-left:240px;
+	padding-right:30px;
+	border-right:1px solid #737373;
+}
+
+.news2 {
+	margin-top:-280px;
+	width:500px;
+	height:160px;
+	padding-left:240px;
+	padding-right:20px;
+	float:right;
+	position:relative;
+}
+
+.news2 p {
+	font-size:14px;
+}
+
+.news2 a:hover {
+	text-decoration:underline;
+}
+
+.links {
+	margin:20 auto 0 auto;
+	height:600px;
+	width:1000px;
+}
+
+.link1 {
+	width:300px;
+	height:200px;
+	background-color:cadetblue;
+	position:relative;
+}
+
+.link2 {
+	width:300px;
+	height:200px;
+	background-color:red;
+	position:relative;
+}
+
+.link3 {
+	width:300px;
+	height:200px;
+	background-color:yellow; 
+	position:relative;
+}
+
+ul a li {
+	color:grey;
+}

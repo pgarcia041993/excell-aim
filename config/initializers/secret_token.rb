@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-MbaOnlinePayment::Application.config.secret_token = '62f02af27dd3fbc34e90ed99e36751f161c60b56880e2904d8e098c5b37063fc794b8f0d17794681f8e0307389169359d51e98af78ccd8489d98783dc113058e'
+AimExcell::Application.config.secret_token = 'd82c150ae5a4371e98b497ac27d977bd5d9e858a295e23b700d9f8271b8e23e362335bdad27f0acf462309fd63e71adc6050bd5f42f5168b45211c7dbb7d91d8'

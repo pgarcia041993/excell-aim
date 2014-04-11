@@ -1,24 +1,4 @@
-MbaOnlinePayment::Application.routes.draw do
-  resources :student_orders
-
-
-  resources :payment_receipts
-
-
-  resources :programs
-
-
-  resources :registration_transactions
-
-  resources :payment_transactions
-
-  post 'payment_transaction' => 'payment_transactions#payment'
-  get 'complete_payment' => 'payment_receipts#receive'
-  get 'payment_confirmation/(:id)' => 'payment_receipts#display'
-  get 'payment_selection/(:registration_transaction_id)' => 'payment_selection#select_payment'
-
-
-
+AimExcell::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -68,7 +48,7 @@ MbaOnlinePayment::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'payment_transactions#index'
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MbaOnlinePayment::Application.load_tasks
+AimExcell::Application.load_tasks

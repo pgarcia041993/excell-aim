@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#page-title').text('EMBA Online Payment');
+    })
+</script>
+
+<div id="front-page">
+  <div style="padding-left: 10px; padding-right: 10px; padding-bottom: 5px;">
+  <div id="login-instructions" style="margin-top: 50px;">
+    <h2>Pay your tuition online...</h2>
+    <p>
+      Congratulations! We've had the pleasure of evaluating your application and are pleased to have you attend our institution.
+      You may pay for your tuition online to complete the registration process.
+    </p>
+  </div>
+  <div id="login-email" style="margin-top: 50px;">
+    <form method="post" action="/payment_transaction">
+      <%= render :partial => 'form' %>
+    </form>
+  </div>
+  </div>
+</div>

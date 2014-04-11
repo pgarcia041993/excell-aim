@@ -1,0 +1,161 @@
+<%= form_for(@student_order) do |f| %>
+    <% if @student_order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@student_order.errors.count, "error") %> prohibited this student_order from being
+            saved:</h2>
+
+          <ul>
+            <% @student_order.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <form class="form-horizontal">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Student Details</legend>
+
+        <table>
+        <!-- Text input-->
+        <div class="control-group">
+          <tr><td><label class="control-label" for="student_order[first_name]">First Name:<sup>*</sup></label></td>
+          <div class="controls">
+            <td><input id="student_order[first_name]" name="student_order[first_name]" type="text" class="input-xlarge" required="" title="Please enter your First Name" />
+       </td>
+            </div>
+          </div>
+          </tr>
+        <!-- Text input-->
+        <div class="control-group">
+          <tr><td><label class="control-label" for="student_order[middle_name]">Middle Name:<sup>*</sup></label></td>
+          <div class="controls">
+            <td><input id="student_order[middle_name]" name="student_order[middle_name]" type="text" class="input-xlarge" required="" title="Please enter your Middle Name"></td>
+          </td>
+            </div>
+          </div>
+          </tr>
+        <!-- Text input-->
+        <div class="control-group">
+        <tr><td><label class="control-label" for="student_order[last_name]">Last Name:<sup>*</sup></label></td>
+          <div class="controls">
+            <td><input id="student_order[last_name]" name="student_order[last_name]" type="text" class="input-xlarge" required="" title="Please enter your Last Name"></td>
+              </td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+        <div class="control-group">
+          <tr><td><label class="control-label" for="student_order[dob]">Date of Birth:</label></td>
+          <div class="controls">
+            <td><input id="student_order[dob]" name="student_order[dob]" type="text" class="input-xlarge text-date" required="" title="Please enter your Date of Birth">
+              </td>
+            </div>
+          </div>
+          </tr>
+        <!-- Text input-->
+        <div class="control-group">
+        <tr><td><label class="control-label" for="student_order[email]">Email:<sup>*</sup></label></td>
+          <div class="controls">
+            <td><input id="student_order[email]" name="student_order[email]" type="text" class="input-xlarge" required=""  title="Please enter your Email Address"></td>
+              </td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+          <div class="control-group">
+            <tr><td><label class="control-label" for="student_order[address]">Delivery Address:<sup>*</sup></label></td>
+            <div class="controls">
+              <td><input id="student_order[address]" name="student_order[address]" type="text" class="input-xlarge" required=""  title="Please enter address for delivery"></td>
+              </td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+          <div class="control-group">
+            <tr><td><label class="control-label" for="student_order[contact]">Contact Number:<sup>*</sup></label></td>
+            <div class="controls">
+              <td><input id="student_order[contact]" name="student_order[contact]" type="text" class="input-xlarge" required=""  title="Please enter your contact number"></td>
+              </td>
+            </div>
+          </div>
+          </tr>
+        </table>
+        <legend>Items Requested</legend>
+        <table id="table-order-form" class="table table-striped">
+          <!-- Text input-->
+          <div class="control-group">
+            <tr>
+              <th class="order-form-header">Description</th>
+              <th class="order-form-header">Quantity</th>
+              <th class="order-form-header">Unit Price</th>
+            </tr>
+            <tr>
+              <td><label class="control-label" for="student_order[transcript_quantity]">Transcript</label></td>
+            <div class="controls">
+              <td>
+                <input id="trans" name="student_order[transcript_quantity]" type="number" placeholder="" class="input-xlarge" value="0" min="0" max="5" style="width:30px;">
+              </td>
+              <td>PHP 1000</td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+          <div class="control-group">
+            <tr>
+              <td><label class="control-label" for="student_order[transcript_quantity]">Business Card</label></td>
+            <div class="controls">
+              <td>
+                <input id="bcard" name="student_order[business_card_quantity]" type="number" placeholder="" class="input-xlarge" value="0" min="0" max="5" style="width:30px;">
+              </td>
+              <td>PHP 1000</td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+          <div class="control-group">
+            <tr>
+              <td><label class="control-label" for="student_order[transcript_quantity]">Diploma</label></td>
+            <div class="controls">
+              <td>
+                <input id="diploma" name="student_order[diploma_quantity]" type="number" placeholder="" class="input-xlarge" value="0" min="0" max="5" style="width:30px;">
+              </td>
+              <td>PHP 1000</td>
+            </div>
+          </div>
+          </tr>
+          <!-- Text input-->
+          <tr class="info">
+            <div class="control-group">
+              <td>
+                <label class="control-label" for="student_order[total]">
+                  <p class="order-form-total-header">
+                    Total
+                  </p>
+                </label>
+              </td>
+              <div class="controls">
+                <td>
+                  <input id="total" name="student_order[total_amount]" type="text" placeholder="" class="input-xlarge" value="0" style="width:40px;" readonly>
+                </td>
+              </div>
+              <td>
+                <h6>You will pay this amount.</h6>
+              </td>
+            </div>
+          </tr>
+        </table>
+        <!-- Button -->
+        <div class="control-group">
+          <label class="control-label" for="singlebutton"></label>
+
+          <div class="controls">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Place Order</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+<% end %>

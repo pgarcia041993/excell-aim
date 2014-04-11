@@ -1,0 +1,52 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#page-title').text("Thank You");
+    })
+</script>
+<div>
+  <h1 style="padding-top: 20px;">Payment Confirmation</h1>
+  <div class="row row-fluid" style="padding-left: 50px; padding-top: 25px;">
+    <div class="span4">
+      <p>
+        <b><%= @payment_receipt.registration_transaction.name %></b>
+        <br/>
+        <%= @payment_receipt.registration_transaction.email %>
+      </p>
+      <p>
+        <%= @payment_receipt.registration_transaction.program.name %>
+        <br/>
+        <%= @payment_receipt.registration_transaction.program.start_date.strftime('%m/%d/%Y') %> to <%= @payment_receipt.registration_transaction.program.end_date.strftime('%m/%d/%Y') %>
+      </p>
+    </div>
+    <div class="span6">
+      <p>Please take note of the Transaction Reference and Receipt Number as you can use it as a proof of payment.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="" style="padding-top: 25px;">
+  <table class="table table-striped">
+    <tr>
+      <th>Card Type</th>
+      <td><%= @payment_receipt.card_type %></td>
+    </tr>
+    <tr>
+      <th>Transaction Amount</th>
+      <td><%= number_with_delimiter(number_with_precision(@payment_receipt.amount, :precision => 2)) %></td>
+    </tr>
+    <tr>
+      <th>Receipt Number</th>
+      <td><%= @payment_receipt.receipt_number %></td>
+    </tr>
+    <tr>
+      <th>Reference Number</th>
+      <td><%= @payment_receipt.reference_number.upcase %></td>
+    </tr>
+    <tr>
+      <th>Payment Date</th>
+      <td><%= @payment_receipt.created_at.strftime('%m/%d/%Y') %></td>
+    </tr>
+  </table>
+</div>

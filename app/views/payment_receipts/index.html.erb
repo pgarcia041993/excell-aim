@@ -1,0 +1,33 @@
+<h1>Payments</h1>
+
+<table class="table striped">
+  <tr>
+    <th>Type</th>
+    <th>Reference</th>
+    <th>Receipt</th>
+    <th>Payor/Program</th>
+    <th>Amount</th>
+    <th>Card type</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payment_receipts.each do |payment_receipt| %>
+  <tr>
+    <td><%= payment_receipt.type %></td>
+    <td><%= payment_receipt.reference_number.upcase %></td>
+    <td><%= payment_receipt.receipt_number %></td>
+    <td><%= "<b>#{payment_receipt.registration_transaction.name}</b> (#{payment_receipt.registration_transaction.program.name})".html_safe %></td>
+    <td><%= number_with_delimiter(number_with_precision(payment_receipt.amount, :precision => 2)) %></td>
+    <td><%= payment_receipt.card_type %></td>
+    <td><%= payment_receipt.description %></td>
+    <td><%= link_to 'Show', payment_receipt %></td>
+    <td><%= link_to 'Edit', edit_payment_receipt_path(payment_receipt) %></td>
+    <td><%= link_to 'Destroy', payment_receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -1,0 +1,27 @@
+<h1>Programs</h1>
+
+<table class="table striped">
+  <tr>
+    <th>Name</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Price</th>
+    <th>Actions</th>
+    <th></th>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+    <td><%= program.name %></td>
+    <td><%= program.start_date %></td>
+    <td><%= program.end_date %></td>
+    <td><%= program.price %></td>
+    <td><%= link_to 'Edit', edit_program_path(program), :class => 'button info' %></td>
+    <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button danger' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Program', new_program_path, :class => 'button primary' %>

@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    $('#page-title').text('EMBA Online Payment')
+</script>
+
+<div id="front-page">
+  <div style="padding-left: 10px; padding-right: 10px; padding-bottom: 5px;">
+    <div id="login-instructions" style="margin-top: 50px;">
+      <h2>Confirm your registration information...</h2>
+
+      <p>
+        Following are the details of your registration. Kindly confirm if these are correct and click on
+        the <b>PAY</b> button to complete processing your payment. Otherwise, if there are any discrepancies regarding your
+        application, please click on <b>CANCEL</b> in order to ensure that you are not charged.
+      </p>
+    </div>
+    <div id="login-email" style="margin-top: 50px;">
+      <form method="post" action="<%= PAYMENT_SERVER_CONFIG %>">
+        <%= render :partial => 'print_form' %>
+      </form>
+    </div>
+  </div>
+</div>

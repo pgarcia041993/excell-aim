@@ -1,6 +1,0 @@
-<div>
-  <input type="hidden" name="pay" value="<%= number_with_precision(@registration_transaction.invoice_amount, :precision => 2).split('.').join %>">
-  <input type="hidden" name="order" value="<%= @registration_transaction.id %>">
-  <input type="hidden" name="aimRef" value="<%= SecureRandom.hex(3) %>">
-  <input type="hidden" name="callbackUrl" value="http://<%= CURRENT_DEPLOYED_HOST %>/complete_payment">
-</div>
